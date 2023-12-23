@@ -21,7 +21,7 @@ https://github.com/BradleyLewis08/flash-final/tree/mininet
 1. We built a custom network 'customNetwork.py' that would interface with miniNet, an open source software that imitates fully set up systems, to create a realistic dummy network for our simulation.
 2. We built a function 'mininetParser.py' that takes the bare bones routing information that miniNet gives us along with the network topology information and constructs FIBs in JUNOS format through our custom routing protocol.
 
-**TOPOLOGY AND RULE PARSING** In order to allow our system to be able to work in any system, we built out a modular parser that aims to convert FIB tables taken from a variety of router types and convert these into an intermediate representation that can be fed into Flash.
+**TOPOLOGY AND RULE PARSING**: In order to allow our system to be able to work in any system, we built out a modular parser that aims to convert FIB tables taken from a variety of router types and convert these into an intermediate representation that can be fed into Flash.
 
 1. We built a `TopologyParser` class that takes in a network configuration file and parses this to establish the physical links between devices on the network that is required for Flash to run. This was currently based off the format of data dumped from the `net` command in mininet, though the parser is modular and is esaily extensible to other formats.
 
