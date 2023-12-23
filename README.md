@@ -16,6 +16,10 @@ https://github.com/BradleyLewis08/flash-final/tree/mininet
 
 ### Code Walkthrough
 
+**FIBs**: Our functionality would be incomplete without working with FIBs, so converting from generic formats to our intermediate representation of the flash format was our first priority.
+1. We built a custom network 'customNetwork.py' that would interface with miniNet, an open source software that imitates fully set up systems, to create a realistic dummy network for our simulation.
+2. We built a function 'mininetParser.py' that takes the bare bones routing information that miniNet gives us along with the network topology information and constructs FIBs in JUNOS format through our custom routing protocol.
+
 **FLASH**: To build on flash, we created functionalities in five key areas.
 
 1. New `GenericLoader` class that can take in any network and topology to run flash in one go. Ideally, we want to modify this in the future to run on a thread so that it can be repeatedly executed with updates.
